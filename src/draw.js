@@ -10,18 +10,18 @@ function  Draw() {
     useEffect(() => {
         const canvas = canvasRef.current;
         // for screen density- pixels
-        canvas.width = window.innerWidth * 2;
-        canvas.height = window.innerHeight * 2;
-        canvas.style.width = `${window.innerWidth}px`;
-        canvas.style.height = `${window.innerHeight}px`;
+        canvas.width = 300;
+        canvas.height = 380;
+        canvas.style.width = 300;
+        canvas.style.height = 380;
 
         const context = canvas.getContext("2d")
         // for screen density 
-        context.scale(2, 2)
+        
         // line shape and color tb changed in state later?
-        context.lineCap = "round"
+        context.lineCap = "square"
         context.strokeStyle = "black"
-        context.lineWidth = 2
+        context.lineWidth = 1
         contextRef.current = context;
     }, [])
 

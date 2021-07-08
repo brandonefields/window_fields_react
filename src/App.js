@@ -1,5 +1,6 @@
 import './App.css';
 import Draw from './draw'
+import Options from './Options';
 
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
     <div className="App">
       <div className="main">
         <h1>Window Fields</h1>
-        <Draw />
+        <Options className="options"></Options>
+        <Draw className="draw"/>
         {/* <div className="drawing-pad-container">
           <img src="https://unsplash.com/photos/0KE2UZWeV2Q" alt="note pad"/> */}
         {/* </div> */}

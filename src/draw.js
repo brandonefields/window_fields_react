@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 
 function  Draw() {
-
-
+    const color = useSelector((store)=> store.color)
     const canvasRef = useRef(null)
     const contextRef = useRef(null)
     const [isDrawing, setIsDrawing] = useState(false)
@@ -10,20 +11,23 @@ function  Draw() {
     useEffect(() => {
         const canvas = canvasRef.current;
         // for screen density- pixels
-        canvas.width = 300;
-        canvas.height = 380;
-        canvas.style.width = 300;
-        canvas.style.height = 380;
-
+        canvas.width = 360;
+        canvas.height = 360;
         const context = canvas.getContext("2d")
         // for screen density 
         
         // line shape and color tb changed in state later?
         context.lineCap = "square"
-        context.strokeStyle = "black"
+        // dispatch(color2())
+        // " ${dispatch(color2())} "
+        context.strokeStyle = color
         context.lineWidth = 1
         contextRef.current = context;
-    }, [])
+    }, [color])
+
+    // const handleColorChange = () => {
+
+    
 
     const startDrawing = ({ nativeEvent }) => {
         const { offsetX, offsetY } = nativeEvent

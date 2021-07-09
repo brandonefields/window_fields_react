@@ -23,7 +23,7 @@ html {
 }
 
 .options {
- 
+  margin: 0em;
   padding: 1em;
 }
 
@@ -57,7 +57,7 @@ h1 {
   justify-content: center;
   background-color: rgba(232, 0, 0, .2);
 
-  cursor: url("./Images/pen_image_big.png"), auto;
+  cursor: url('./Images/pen_image_big.png'), auto;
 }
 
 /* ################  from how to website */

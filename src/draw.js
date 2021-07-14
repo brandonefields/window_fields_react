@@ -23,7 +23,7 @@ function  Draw() {
         context.strokeStyle = color
         context.lineWidth = 1
         contextRef.current = context;
-    }, [color])
+    }, [color],)
 
     // const handleColorChange = () => {
 

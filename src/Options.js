@@ -9,13 +9,12 @@ export default function Options(){
         return {type:'SET_COLOR', payload: color}
     }
 
-    function buttonTest
+    
 
-    return (
+        return (
         <div className="options-container">
             <form>
                 <label>color</label>
-                <button onClick={buttonTest}></button>
                 <select
                     className="color-drop-down"
                     onChange={(e) => dispatch(colorChoice(e.target.value))}>

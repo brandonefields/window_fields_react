@@ -3,7 +3,6 @@ import Draw from './draw'
 import Options from './Options';
 import { store } from './store'
 import { Provider } from 'react-redux'
-import CanvasDraw from './CanvasDraw';
 
 function App() {
   // const [colors,setColors] = useState(['black','white','blue'])

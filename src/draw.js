@@ -7,8 +7,8 @@ function  Draw() {
     const canvasRef = useRef(null)
     const contextRef = useRef(null)
     const [isDrawing, setIsDrawing] = useState(false)
-    let canvas = useRef()
-    let context = useRef()
+    let canvas = useRef(null)
+    let context = useRef(null)
     
     useEffect(() => {
         canvas = canvasRef.current;

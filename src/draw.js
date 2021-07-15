@@ -9,20 +9,22 @@ function Draw() {
     const [isDrawing, setIsDrawing] = useState(false)
     
     
+    var canvas1 = useRef(null)
 
     useEffect(() => {
-        var canvas = canvasRef.current;
-        var context = canvas.getContext("2d")
-        canvas.width = 360;
-        canvas.height = 360;
+        canvas1 = canvasRef.current;
+        var context1 = canvas1.getContext("2d")
+        canvas1.width = 360;
+        canvas1.height = 360;
 
-        context.lineCap = "square"
+        context1.lineCap = "square"
         // dispatch(color2())
         // " ${dispatch(color2())} "
-        context.strokeStyle = color
-        context.lineWidth = 1
-        contextRef.current = context;
-    }, [])
+        context1.strokeStyle = color
+        context1.lineWidth = 1
+        contextRef.current = context1;
+        console.log(canvas1)
+    },[])
 
     useEffect(() => {
         var canvas = canvasRef.current;

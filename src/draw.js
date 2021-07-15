@@ -23,7 +23,6 @@ function Draw() {
         context1.strokeStyle = color
         context1.lineWidth = 1
         contextRef.current = context1;
-        console.log(canvas1)
     },[])
 
     useEffect(() => {

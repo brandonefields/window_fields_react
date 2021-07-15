@@ -3,6 +3,7 @@ import Draw from './draw'
 import Options from './Options';
 import { store } from './store'
 import { Provider } from 'react-redux'
+import ImageUpload from './Components/ImageUpload';
 
 function App() {
   // const [colors,setColors] = useState(['black','white','blue'])
@@ -17,6 +18,7 @@ function App() {
         <div className="main">
           <h1>Window Fields</h1>
           <Options className="options"></Options>
+          <ImageUpload />
           <Draw className="draw" />
           {/* <CanvasDraw /> */}
           {/* <div className="drawing-pad-container">

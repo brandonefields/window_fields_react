@@ -2,40 +2,36 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 
-function  Draw() {
-    const color = useSelector((store)=> store.color)
+function Draw() {
+    const color = useSelector((store) => store.color)
     const canvasRef = useRef(null)
     const contextRef = useRef(null)
     const [isDrawing, setIsDrawing] = useState(false)
-    let canvas = useRef(null)
-    let context = useRef(null)
-    
+    var canvas = useRef(null)
+    var context = useRef(null)
+
     useEffect(() => {
-        canvas = canvasRef.current;
-        context = canvas.getContext("2d")
-        // for screen density- pixels
+        var canvas = canvasRef.current;
+        var context = canvas.getContext("2d")
         canvas.width = 360;
         canvas.height = 360;
-        // for screen density 
-        // line shape and color tb changed in state later?
+
         context.lineCap = "square"
         // dispatch(color2())
         // " ${dispatch(color2())} "
         context.strokeStyle = color
         context.lineWidth = 1
         contextRef.current = context;
-        console.log("this is the upper useEffect",context)
     }, [])
-    
+
     useEffect(() => {
-        canvas = canvasRef.current;
-        context = canvas.getContext("2d")
+        var canvas = canvasRef.current;
+        var context = canvas.getContext("2d")
         context.strokeStyle = color
-        console.log(context);
     }, [color]);
 
     // const handleColorChange = () => {
-    
+
 
     const startDrawing = ({ nativeEvent }) => {
         const { offsetX, offsetY } = nativeEvent
@@ -57,18 +53,18 @@ function  Draw() {
         contextRef.current.lineTo(offsetX, offsetY)
         // draws the stroke
         contextRef.current.stroke()
-        
+
     }
 
     return (
         <div>
             <canvas
-            className="canvas"
-            onMouseDown={startDrawing}
-            onMouseUp={finishedDrawing}
-            onMouseMove={draw}
-            ref={canvasRef}
-        ></canvas>
+                className="canvas"
+                onMouseDown={startDrawing}
+                onMouseUp={finishedDrawing}
+                onMouseMove={draw}
+                ref={canvasRef}
+            ></canvas>
         </div>
     );
 }

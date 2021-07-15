@@ -7,15 +7,16 @@ function  Draw() {
     const canvasRef = useRef(null)
     const contextRef = useRef(null)
     const [isDrawing, setIsDrawing] = useState(false)
-
+    let canvas
+    let context
+    
     useEffect(() => {
-        const canvas = canvasRef.current;
+        canvas = canvasRef.current;
+        context = canvas.getContext("2d")
         // for screen density- pixels
         canvas.width = 360;
         canvas.height = 360;
-        const context = canvas.getContext("2d")
         // for screen density 
-        
         // line shape and color tb changed in state later?
         context.lineCap = "square"
         // dispatch(color2())
@@ -23,10 +24,17 @@ function  Draw() {
         context.strokeStyle = color
         context.lineWidth = 1
         contextRef.current = context;
-    }, [color],)
+        console.log("this is the upper useEffect",context)
+    }, [])
+    
+    useEffect(() => {
+        canvas = canvasRef.current;
+        context = canvas.getContext("2d")
+        context.strokeStyle = color
+        console.log(context);
+    }, [color]);
 
     // const handleColorChange = () => {
-
     
 
     const startDrawing = ({ nativeEvent }) => {
@@ -42,7 +50,6 @@ function  Draw() {
     }
 
     const draw = ({ nativeEvent }) => {
-        console.log("hello world")
         if (!isDrawing) {
             return
         }

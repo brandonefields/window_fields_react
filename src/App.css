@@ -85,3 +85,35 @@ h1 {
   padding: 2rem;
   
 }
+.artworks-map {
+  max-width: 5rem;
+}
+
+ /* FROM CAROUSEL FEATURE */
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 20px;
+}
+.little-nav__image {
+  margin: 2rem;
+  padding: 2rem;
+  border: 2rem;
+}
+
+.ptags-for-nav-images {
+  line-height: 1.1em;
+  font-family: "Encode Sans SC", sans-serif;
+  background: rgb(218, 218, 218);
+  color: rgb(72, 72, 72);
+  border-radius: 3px;
+}
+.remove-artwork-button:hover {
+  background: rgb(194, 92, 92);
+
+}

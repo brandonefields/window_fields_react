@@ -74,6 +74,7 @@ const ImageUpload = () => {
         return artworks.map((aw) => {
             return (
                 <div className="wrapper">
+                    
                     <nav className="little-nav">
                         <a href={artworks.id}>
                         <p className="ptags-for-nav-images">"{aw.title}"</p>
@@ -138,6 +139,7 @@ const ImageUpload = () => {
                     </div>
                 </div>
             </main>
+            <label className="artworks-label"><strong>• Artworks {" "}</strong></label>
             <div>{displayArtworks()}</div>
         </div>
     );

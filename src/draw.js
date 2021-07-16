@@ -62,14 +62,20 @@ function Draw() {
     }
 
     const prepDownload = () => {
-        document.getElementById("downloader").download = "image.png";
-        document.getElementById("downloader").href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+        // document.getElementById("downloader").download = "image.png";
+        // document.getElementById("downloader").href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
     }
     
     console.log();
 
     return (
         <div>
+            <a
+                className="download-link"
+                id="downloader"
+                href="#"
+                onClick={prepDownload()} 
+                download="image.png">Download Artwork</a>
             <canvas
                 id="canvas"
                 className="canvas"
@@ -78,11 +84,6 @@ function Draw() {
                 onMouseMove={draw}
                 ref={canvasRef}
             ></canvas>
-            <a
-                id="downloader"
-                href="#"
-                onClick={prepDownload()} 
-                download="image.png">Download Artwork</a>
         </div>
     );
 }

@@ -113,9 +113,10 @@ img {
 }
 
 .ptags-for-nav-images {
+  margin: 10px;
   line-height: 1.1em;
   font-family: "Encode Sans SC", sans-serif;
-  background: rgb(218, 218, 218);
+  background: rgba(233, 234, 253, 70%);
   color: rgb(72, 72, 72);
   border-radius: 3px;
   text-align: center;
@@ -127,7 +128,14 @@ img {
   background-color: rgb(240, 238, 216);
 } 
 
+.remove-artwork-button {
+  margin: 10px;
+  background: rgba(233, 234, 253, 70%);
+}
+
 .remove-artwork-button:hover {
+  
+  transform: scale(1.1,1.1);
   background: rgb(194, 92, 92);
 
 }
@@ -157,6 +165,32 @@ input {
   background:rgb(255, 255, 255)
 }
 
-.download-drawing-link {
-  color: brown;
+.download-link {
+  background: rgba(242, 242, 242, 90%);
+  padding: 15px;
+  position:relative;
+  right: 0px;
+  left: 12em;
+  color: rgb(80, 173, 106);
+  border-radius: 2px;
+}
+
+.download-link:hover {
+  background:rgb(230, 147, 88);
+  color: rgb(79, 79, 242);
+}
+
+.artworks-label {
+  color: rgb(36, 36, 36);
+  background:rgba(233, 234, 253, 50%);
+  padding: 6px;
+  font-family: "Encode Sans SC", sans-serif;
+  margin: 30px;
+  border-radius: 3px;
+  border: none;
+}
+
+.color-picker-dropdown {
+  margin: 5px;
+  font-family: "Encode Sans SC", sans-serif;
 }

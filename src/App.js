@@ -25,7 +25,7 @@ function App() {
           {/* <div className="drawing-pad-container">
                 <img src="https://unsplash.com/photos/0KE2UZWeV2Q" alt="note pad"/> */}
           {/* </div> */}
-          <ImageCard />
+          {/* <ImageCard /> */}
         </div>
       </div>
     </Provider>

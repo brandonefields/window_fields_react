@@ -62,9 +62,26 @@ h1 {
 
 /* ################  from how to website */
 .uploaded-image-card {
+
+
+}
+
+.uploaded-image {
+  max-width: 10rem;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.form-container {
+  font-family: "Encode Sans SC", sans-serif;
   display: flex;
-  justify-content: center;
-  margin: 8rem;
+  justify-content:left;
+  margin: 1rem;
+  margin-right: 19rem;
+  margin-left: 19rem;
   background-color: rgb(160, 160, 160);
-  border-radius: 50px;
+  border-radius: 5px;
+  box-shadow: 2px 5px 2px 1px rgba(80, 80, 80, 0.2);
+  padding: 2rem;
+  
 }

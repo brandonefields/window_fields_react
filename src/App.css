@@ -11,6 +11,10 @@ html {
   
 }
 
+.draw {
+  display: inherit;
+}
+
 .App {
   text-align: center;
   
@@ -62,6 +66,7 @@ h1 {
 
 /* ################  from how to website */
 .uploaded-image-card {
+  border-radius: 10px;
 
 
 }
@@ -76,6 +81,7 @@ h1 {
   font-family: "Encode Sans SC", sans-serif;
   display: flex;
   justify-content:left;
+  margin-top: 10rem;
   margin: 1rem;
   margin-right: 19rem;
   margin-left: 19rem;
@@ -112,8 +118,45 @@ img {
   background: rgb(218, 218, 218);
   color: rgb(72, 72, 72);
   border-radius: 3px;
+  text-align: center;
 }
+
+.ptags-for-nav-images:hover {
+  justify-content: center;
+  transform: scale(1,1.5);
+  background-color: rgb(240, 238, 216);
+} 
+
 .remove-artwork-button:hover {
   background: rgb(194, 92, 92);
 
+}
+.top-div-image-upload {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.label-submit {
+  background:rgb(126, 126, 126);
+  padding: 5px;
+  line-height: 200%;
+  border-radius: 2px;
+  color: aliceblue;
+  margin: 20px;
+}
+input {
+  margin: 10px;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+input {
+  background:rgb(203, 203, 203);
+}
+
+.button-input {
+  background:rgb(255, 255, 255)
+}
+
+.download-drawing-link {
+  color: brown;
 }

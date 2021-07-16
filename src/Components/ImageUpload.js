@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form'
+import sketchBook from '../Images/sketch_book.png'
+
 
 const ImageUpload = () => {
 
     const [artworks, setArtworks] = useState([])
-    const [image, setImage] = useState("")
+    const [image, setImage] = useState("http://thevirtualinstructor.com/blog/wp-content/uploads/2012/04/sketchbookideas-150x150.jpg")
     const [title, setTitle] = useState("")
 
     const { register, } = useForm()
@@ -85,21 +87,24 @@ const ImageUpload = () => {
                         key={aw.id}
                         className="remove-artwork-button"
                         onClick={() => removeArtwork(aw.id)}
-                        >Remove Artwork</button>
+                        >Remove Artwork <span>{"  "} &#10060;</span>{" "}</button>
                         </a>
                     </nav>
                 </div>
         )})
     }
 
-    console.log("this is artworks >>", artworks[22])
-    console.log(` image  >> ${image} <<`)
-    console.log(` title  >>  <<`,title)
+    // console.log("this is artworks >>", artworks[22])
+    // console.log(` image  >> ${image} <<`)
+    // console.log(` title  >>  <<`,title)
+
+    
 
     return (
         <div className="top-div-image-upload">
             <main className="form-container">
                 <div>
+                    <label className="label-submit"><strong>• Submit your Artwork</strong></label>
                     <form
                         onSubmit={handleSubmitToBackEnd}>
                         <input
@@ -117,6 +122,7 @@ const ImageUpload = () => {
                             onChange={(event) => handleInputChange(event)}
                         />
                         <input
+                            className="button-input"
                             type="submit"
                             value="Submit Picture">
                         </input>

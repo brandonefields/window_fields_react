@@ -13,10 +13,10 @@ function App() {
         <div className="main">
           <h1>Window Fields</h1>
           <Options className="options"></Options>
-          <ImageUpload />
           <Draw className="draw" />
         </div>
       </div>
+      <ImageUpload />
     </Provider>
   )
 }

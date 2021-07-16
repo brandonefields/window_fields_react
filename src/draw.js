@@ -56,16 +56,33 @@ function Draw() {
         contextRef.current.stroke()
 
     }
+    const saveCanvas = () => {
+        var dataURL = canvas1.toDataURL();
+        console.log(dataURL)
+    }
+
+    const prepDownload = () => {
+        document.getElementById("downloader").download = "image.png";
+        document.getElementById("downloader").href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+    }
+    
+    console.log();
 
     return (
         <div>
             <canvas
+                id="canvas"
                 className="canvas"
                 onMouseDown={startDrawing}
                 onMouseUp={finishedDrawing}
                 onMouseMove={draw}
                 ref={canvasRef}
             ></canvas>
+            <a
+                id="downloader"
+                href="#"
+                onClick={prepDownload()} 
+                download="image.png">Download Artwork</a>
         </div>
     );
 }

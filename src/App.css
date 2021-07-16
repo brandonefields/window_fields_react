@@ -61,4 +61,10 @@ h1 {
 }
 
 /* ################  from how to website */
-
+.uploaded-image-card {
+  display: flex;
+  justify-content: center;
+  margin: 8rem;
+  background-color: rgb(160, 160, 160);
+  border-radius: 50px;
+}

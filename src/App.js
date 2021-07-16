@@ -4,6 +4,7 @@ import Options from './Options';
 import { store } from './store'
 import { Provider } from 'react-redux'
 import ImageUpload from './Components/ImageUpload';
+import ImageCard from './Components/ImageCard';
 
 function App() {
   // const [colors,setColors] = useState(['black','white','blue'])
@@ -24,6 +25,7 @@ function App() {
           {/* <div className="drawing-pad-container">
                 <img src="https://unsplash.com/photos/0KE2UZWeV2Q" alt="note pad"/> */}
           {/* </div> */}
+          <ImageCard />
         </div>
       </div>
     </Provider>

@@ -8,15 +8,12 @@ function Draw() {
     const contextRef = useRef(null)
     const [isDrawing, setIsDrawing] = useState(false)
     
-    var canvas1 = useRef(null)
-
     useEffect(() => {
-        canvas1 = canvasRef.current;
+        var canvas1 = canvasRef.current;
         var context1 = canvas1.getContext("2d")
         canvas1.width = 360;
         canvas1.height = 360;
         context1.lineCap = "square"
-        context1.strokeStyle = color
         context1.lineWidth = 1
         contextRef.current = context1;
     },[])

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form'
-import sketchBook from '../Images/sketch_book.png'
-
 
 const ImageUpload = () => {
 
@@ -10,20 +8,6 @@ const ImageUpload = () => {
     const [title, setTitle] = useState("")
 
     const { register, } = useForm()
-
-    // const onFormSubmit = (event) => {
-    //     event.preventDefault()
-    //     const tempUrl = new FormData(event.target).get("state");
-    //     setImage(image, tempUrl)
-    //     console.log(image, "< State After")
-    // }
-
-    // const onFormSubmitTitle = (event) => {
-    //     event.preventDefault()
-    //     const tempTitle = new FormData(event.target).get("state");
-    //     setTitle(title, tempTitle)
-    //     console.log(title, "< State After")
-    // }
 
     const handleInputChange = (event) => {
         let eventData = event.target.value
@@ -94,12 +78,6 @@ const ImageUpload = () => {
                 </div>
         )})
     }
-
-    // console.log("this is artworks >>", artworks[22])
-    // console.log(` image  >> ${image} <<`)
-    // console.log(` title  >>  <<`,title)
-
-    
 
     return (
         <div className="top-div-image-upload">

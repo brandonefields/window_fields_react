@@ -11,7 +11,13 @@ html {
   
 }
 
+.draw {
+  display: inherit;
+}
+
 .App {
+  display: flex;
+  justify-content:space-evenly;
   text-align: center;
   
   background-repeat: fit;
@@ -61,4 +67,132 @@ h1 {
 }
 
 /* ################  from how to website */
+.uploaded-image-card {
+  border-radius: 10px;
 
+
+}
+
+.uploaded-image {
+  max-width: 10rem;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.form-container {
+  font-family: "Encode Sans SC", sans-serif;
+  display: flex;
+  justify-content:left;
+  margin-top: 10rem;
+  margin: 1rem;
+  margin-right: 19rem;
+  margin-left: 19rem;
+  background-color: rgb(160, 160, 160);
+  border-radius: 5px;
+  box-shadow: 2px 5px 2px 1px rgba(80, 80, 80, 0.2);
+  padding: 2rem;
+  
+}
+.artworks-map {
+  max-width: 5rem;
+}
+
+ /* FROM CAROUSEL FEATURE */
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 20px;
+}
+.little-nav__image {
+  margin: 2rem;
+  padding: 2rem;
+  border: 2rem;
+}
+
+.ptags-for-nav-images {
+  margin: 10px;
+  line-height: 1.1em;
+  font-family: "Encode Sans SC", sans-serif;
+  background: rgba(233, 234, 253, 70%);
+  color: rgb(72, 72, 72);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.ptags-for-nav-images:hover {
+  justify-content: center;
+  transform: scale(1,1.5);
+  background-color: rgb(240, 238, 216);
+} 
+
+.remove-artwork-button {
+  margin: 10px;
+  background: rgba(233, 234, 253, 70%);
+}
+
+.remove-artwork-button:hover {
+  
+  transform: scale(1.1,1.1);
+  background: rgb(194, 92, 92);
+
+}
+.top-div-image-upload {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.label-submit {
+  background:rgb(126, 126, 126);
+  padding: 5px;
+  line-height: 200%;
+  border-radius: 2px;
+  color: aliceblue;
+  margin: 20px;
+}
+input {
+  margin: 10px;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+input {
+  background:rgb(203, 203, 203);
+}
+
+.button-input {
+  background:rgb(255, 255, 255)
+}
+
+.download-link {
+  background: rgba(242, 242, 242, 90%);
+  padding: 15px;
+  position:relative;
+  right: 0px;
+  left: 12em;
+  color: rgb(80, 173, 106);
+  border-radius: 2px;
+}
+
+.download-link:hover {
+  background:rgb(230, 147, 88);
+  color: rgb(79, 79, 242);
+}
+
+.artworks-label {
+  color: rgb(36, 36, 36);
+  background:rgba(233, 234, 253, 50%);
+  padding: 6px;
+  font-family: "Encode Sans SC", sans-serif;
+  margin: 30px;
+  border-radius: 3px;
+  border: none;
+}
+
+.color-picker-dropdown {
+  margin: 5px;
+  font-family: "Encode Sans SC", sans-serif;
+}

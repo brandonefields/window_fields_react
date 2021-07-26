@@ -9,17 +9,17 @@ export default function Options(){
         return {type:'SET_COLOR', payload: color}
     }
 
-    
-
         return (
         <div className="options-container">
+          
             <form>
-                <label>color</label>
+                <label 
+                className="color-picker-dropdown">color</label>
                 <select
                     className="color-drop-down"
                     onChange={(e) => dispatch(colorChoice(e.target.value))}>
                     <option value="black">black</option>
-                    <option value="eraser">eraser</option>
+                    <option value="white">eraser</option>
                     <option value="blue">blue</option>
                     <option value="green">green</option>
                     <option value="purple">purple</option>

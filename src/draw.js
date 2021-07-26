@@ -8,7 +8,6 @@ function Draw() {
     const contextRef = useRef(null)
     const [isDrawing, setIsDrawing] = useState(false)
     
-    
     var canvas1 = useRef(null)
 
     useEffect(() => {
@@ -16,10 +15,7 @@ function Draw() {
         var context1 = canvas1.getContext("2d")
         canvas1.width = 360;
         canvas1.height = 360;
-
         context1.lineCap = "square"
-        // dispatch(color2())
-        // " ${dispatch(color2())} "
         context1.strokeStyle = color
         context1.lineWidth = 1
         contextRef.current = context1;
@@ -30,8 +26,6 @@ function Draw() {
         var context = canvas.getContext("2d")
         context.strokeStyle = color
     }, [color]);
-
-    // const handleColorChange = () => {
 
 
     const startDrawing = ({ nativeEvent }) => {
@@ -56,10 +50,29 @@ function Draw() {
         contextRef.current.stroke()
 
     }
+    const saveCanvas = () => {
+        var dataURL = canvas1.toDataURL();
+        console.log(dataURL)
+    }
+
+    const prepDownload = () => {
+        if ( document.getElementById('downloader')) {
+            document.getElementById('downloader').download = "image.png";
+            document.getElementById('downloader').href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+        }
+    }
 
     return (
         <div>
+            <a
+                className="download-link"
+                id="downloader"
+                href= '...'
+                onClick={prepDownload()} 
+                download="image.png"
+                >Download Artwork</a>
             <canvas
+                id="canvas"
                 className="canvas"
                 onMouseDown={startDrawing}
                 onMouseUp={finishedDrawing}

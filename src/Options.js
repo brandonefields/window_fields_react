@@ -9,8 +9,6 @@ export default function Options(){
         return {type:'SET_COLOR', payload: color}
     }
 
-    
-
         return (
         <div className="options-container">
           

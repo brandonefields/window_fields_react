@@ -50,11 +50,7 @@ function Draw() {
         contextRef.current.stroke()
 
     }
-    const saveCanvas = () => {
-        var dataURL = canvas1.toDataURL();
-        console.log(dataURL)
-    }
-
+   
     const prepDownload = () => {
         if ( document.getElementById('downloader')) {
             document.getElementById('downloader').download = "image.png";

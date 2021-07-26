@@ -47,7 +47,7 @@ const ImageUpload = () => {
 
     const removeArtwork = (clickedArtwork) => {
         let newArtworks = artworks.filter(
-            (aw) => aw.id != clickedArtwork
+            (aw) => aw.id !== clickedArtwork
         );
         setArtworks(newArtworks)
         fetch(`http://localhost:3000/artworks/${clickedArtwork}`,{ method: "DELETE"});

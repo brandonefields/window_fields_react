@@ -5,7 +5,7 @@ An app for keeping those connections.
 
 ## Summary
 
- <img src='' height='450'>
+ <img src='https://loom.com/share/a41bc86e18824c5285256de1c4698006' height='450'>
 
 ## Technologies
 

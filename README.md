@@ -1,11 +1,11 @@
 
-# myCard-app
+# window fields
 
-An app for keeping those connections.
+A site where you can sketch and save.
 
 ## Summary
 
- <img src='https://loom.com/share/a41bc86e18824c5285256de1c4698006' height='450'>
+ <img src='https://media.giphy.com/media/uTj5fvo220GfBHALRZ/giphy.gif' height='450'>
 
 ## Technologies
 
